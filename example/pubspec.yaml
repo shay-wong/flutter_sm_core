@@ -1,0 +1,35 @@
+name: example
+version: 1.0.0+1
+publish_to: none
+description: A new Flutter project.
+environment:
+  sdk: ">=3.3.1 <4.0.0"
+
+dependencies:
+  cupertino_icons: ^1.0.6
+  get: 5.0.0-release-candidate-5
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  sm_core:
+    path: ../
+  intl: ^0.18.0
+
+dev_dependencies:
+  flutter_lints: ^3.0.1
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+flutter_intl:
+  class_name: L
+  main_local: zh
+  arb_dir: lib/generated/l10n
+  enabled: true
+  use_deferred_loading: true
+
+get_cli:
+  version: 5

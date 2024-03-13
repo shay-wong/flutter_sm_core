@@ -1,0 +1,7 @@
+{
+  "reload": "Reload",
+  "no_data": "No data",
+  "error": "Error",
+  "no_network": "There is no network at the moment, please try again later",
+  "state_error_tips": "A error occurred"
+}
