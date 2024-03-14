@@ -13,8 +13,8 @@ final logger = MLogger(
     lineLength: consoleOutputLength,
     methodCount: 3,
     excludePaths: [
-      'packages/sm_core/src/utils/logger.dart',
-      'packages/sm_core/src/utils/toast.dart',
+      'packages/flutter_sm_core/src/utils/logger.dart',
+      'packages/flutter_sm_core/src/utils/toast.dart',
     ],
   ),
 );
@@ -23,7 +23,7 @@ class MLogFilter extends LogFilter {
   @override
   bool shouldLog(LogEvent event) {
     var shouldLog = false;
-    if (Configura.isPrientable) {
+    if (Configura.isPrintable) {
       if (event.level.value >= level!.value) {
         shouldLog = true;
       }
@@ -120,6 +120,6 @@ class MLogger extends Logger {
   }
 
   void p(dynamic message) {
-    if (Configura.isPrientable) debugPrint('$message');
+    if (Configura.isPrintable) debugPrint('$message');
   }
 }

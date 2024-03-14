@@ -3,5 +3,10 @@
   "no_data": "No data",
   "error": "Error",
   "no_network": "There is no network at the moment, please try again later",
-  "state_error_tips": "A error occurred"
+  "state_error_tips": "A error occurred",
+  "refresh_pull_up_to_load": "Pull-up loading",
+  "refresh_release_to_load_more": "Release to load more",
+  "refresh_failed_click_retry": "Loading failed. Please click to retry.",
+  "refresh_no_more_data": "End of data",
+  "refresh_complete": "Refresh Complete"
 }

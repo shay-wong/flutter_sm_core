@@ -1,5 +1,5 @@
+import 'package:flutter_sm_core/sm_core.dart';
 import 'package:get/get.dart';
-import 'package:sm_core/sm_core.dart';
 
 class HomeController extends GetxController with MStateMixin {
   @override
