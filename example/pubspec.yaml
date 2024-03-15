@@ -7,13 +7,13 @@ environment:
 
 dependencies:
   cupertino_icons: ^1.0.6
-  get: 5.0.0-release-candidate-5
   flutter:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
   flutter_sm_core:
     path: ../
+  get: 4.6.6
   intl: ^0.18.0
 
 dev_dependencies:

@@ -2,13 +2,11 @@ import 'package:get/get.dart';
 
 import '../controllers/second_controller.dart';
 
-class SecondBinding extends Binding {
+class SecondBinding extends Bindings {
   @override
-  List<Bind> dependencies() {
-    return [
-      Bind.lazyPut<SecondController>(
+  void dependencies() {
+    Get.lazyPut<SecondController>(
         () => SecondController(),
-      ),
-    ];
+    );
   }
 }

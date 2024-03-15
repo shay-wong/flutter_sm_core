@@ -41,7 +41,7 @@ class HomePage extends GetView<HomeController> {
               MContainer(
                 width: 20,
                 height: 20,
-                image: MImage.provider(''),
+                imageProvider: MImage.provider(''),
               ),
               const MImage('https://www.aad.cc/a.png'),
             ],

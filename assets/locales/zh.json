@@ -1,12 +1,1 @@
-{
-  "reload": "重新加载",
-  "no_data": "暂无数据",
-  "error": "错误",
-  "no_network": "当前暂无网络, 请稍后再试",
-  "state_error_tips": "啊哦, 出错了",
-  "refresh_complete": "刷新完成",
-  "refresh_release_to_load_more": "放开加载更多",
-  "refresh_failed_click_retry": "加载失败， 点击重试",
-  "refresh_no_more_data": "没有更多啦",
-  "refresh_pull_up_to_load": "上拉加载"
-}
+{}

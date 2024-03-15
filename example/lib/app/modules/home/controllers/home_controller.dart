@@ -13,7 +13,7 @@ class HomeController extends GetxController with MStateMixin {
     try {
       await Future.delayed(1.seconds);
       // return Future.error(MError.noNetwork());
-      // return Future.error(LocaleKeys.state_error_tips.tr);
+      // return Future.error('state_error_tips'.tr);
       // return [];
       return true;
     } catch (e) {

@@ -1,6 +1,21 @@
 import '../utils/data_format/data_format.dart';
+extension DurationIntExt on int {
+  Duration get seconds => Duration(seconds: this);
 
-extension NumDurationExt on num {
+  Duration get days => Duration(days: this);
+
+  Duration get hours => Duration(hours: this);
+
+  Duration get minutes => Duration(minutes: this);
+
+  Duration get milliseconds => Duration(milliseconds: this);
+
+  Duration get microseconds => Duration(microseconds: this);
+
+  Duration get ms => milliseconds;
+}
+
+extension DurationNumExt on num {
   Duration get seconds => toDouble().seconds;
 
   Duration get days => toDouble().days;
@@ -16,7 +31,7 @@ extension NumDurationExt on num {
   Duration get ms => milliseconds;
 }
 
-extension DoubleDurationExt on double {
+extension DurationDoubleExt on double {
   Duration get seconds => converToDuration(seconds: this);
 
   Duration get days => converToDuration(days: this);
