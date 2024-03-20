@@ -49,6 +49,7 @@ class MToast {
   static TransitionBuilder init({
     TransitionBuilder? builder,
   }) {
+    configLoading();
     return EasyLoading.init();
   }
 

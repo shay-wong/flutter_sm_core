@@ -7,6 +7,7 @@ export 'package:flutter_sm_logger/sm_logger.dart';
 export 'package:flutter_sm_models/sm_models.dart';
 export 'package:flutter_sm_network/sm_network.dart';
 export 'package:flutter_sm_widget/sm_widget.dart';
+export 'package:loading_animation_widget/loading_animation_widget.dart';
 
 export 'src/extension/app_translation_extension.dart';
 export 'src/extension/border_radius_ext.dart';
