@@ -13,33 +13,18 @@ dependencies:
     sdk: flutter
   flutter_easyloading: ^3.0.5
   flutter_screenutil: ^5.9.0
-  flutter_sm_logger:
-    git:
-      url: https://github.com/shay-wong/flutter_sm_logger.git
-      ref: main
-  flutter_sm_models:
-    git:
-      url: https://github.com/shay-wong/flutter_sm_models.git
-      ref: main
-  flutter_sm_network:
-    git:
-      url: https://github.com/shay-wong/flutter_sm_network.git
-      ref: main
-  flutter_sm_widget:
-    git:
-      url: https://github.com/shay-wong/flutter_sm_widget.git
-      ref: main
-  flutter_sm_get:
-    git:
-      url: https://github.com/shay-wong/flutter_sm_get.git
-      ref: main
-  get: 4.6.6
+  flutter_sm_logger: ^0.0.3
+  flutter_sm_models: ^0.0.2
+  flutter_sm_network: ^0.0.1
+  flutter_sm_widget: ^0.0.1
+  flutter_sm_get_plus: ^0.0.1
+  get: ^4.6.6
   intl: ^0.18.0
   loading_animation_widget: ^1.2.1
   url_launcher: ^6.2.5
 
 dev_dependencies:
-  build_runner: 2.4.8
+  build_runner: ^2.4.8
   flutter_lints: ^3.0.1
   flutter_test:
     sdk: flutter

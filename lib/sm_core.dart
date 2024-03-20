@@ -1,7 +1,7 @@
 library sm_core;
 
 export 'package:flutter_screenutil/flutter_screenutil.dart';
-export 'package:flutter_sm_get/sm_get.dart';
+export 'package:flutter_sm_get_plus/sm_get_plus.dart';
 export 'package:flutter_sm_logger/sm_logger.dart';
 export 'package:flutter_sm_models/sm_models.dart';
 export 'package:flutter_sm_network/sm_network.dart';

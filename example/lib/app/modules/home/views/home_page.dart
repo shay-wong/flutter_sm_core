@@ -26,7 +26,7 @@ class HomePage extends GetView<HomeController> {
               ),
               const MTextField(
                 // text: '123',
-                placeholder: '234',
+                hintText: '234',
                 decoration: InputDecoration(hintText: '345'),
               ),
               const TextField(

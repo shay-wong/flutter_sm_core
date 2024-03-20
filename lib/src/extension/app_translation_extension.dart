@@ -1,5 +1,5 @@
 // TODO: 本地化还需要再优化
-import 'package:flutter_sm_get/sm_get.dart';
+import 'package:flutter_sm_get_plus/sm_get_plus.dart';
 import 'package:flutter_sm_logger/sm_logger.dart';
 import 'package:flutter_sm_models/generated/locales.g.dart';
 import 'package:flutter_sm_widget/generated/locales.g.dart';
