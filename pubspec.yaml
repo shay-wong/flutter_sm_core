@@ -1,6 +1,6 @@
 name: flutter_sm_core
 description: "A simple core library for flutter, providing some common utilities and classes."
-version: 0.0.1
+version: 0.0.2-dev.1
 homepage: "https://github.com/shay-wong/flutter_sm_core"
 repository: "https://github.com/shay-wong/flutter_sm_core"
 issue_tracker: "https://github.com/shay-wong/flutter_sm_core/issues"

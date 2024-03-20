@@ -1,5 +1,6 @@
 library sm_core;
 
+export 'package:flutter_easyloading/flutter_easyloading.dart';
 export 'package:flutter_screenutil/flutter_screenutil.dart';
 export 'package:flutter_sm_get_plus/sm_get_plus.dart';
 export 'package:flutter_sm_logger/sm_logger.dart';
@@ -18,3 +19,4 @@ export 'src/extension/uri_extension.dart';
 export 'src/utils/data_format/data_format.dart';
 export 'src/utils/screen_adaptive.dart';
 export 'src/utils/toast.dart';
+

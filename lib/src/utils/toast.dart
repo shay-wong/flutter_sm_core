@@ -45,6 +45,13 @@ class CustomAnimation extends EasyLoadingAnimation {
 }
 
 class MToast {
+  /// init EasyLoading
+  static TransitionBuilder init({
+    TransitionBuilder? builder,
+  }) {
+    return EasyLoading.init();
+  }
+
   static void configLoading() {
     EasyLoading.instance
       ..displayDuration = const Duration(milliseconds: 2000)
