@@ -1,6 +1,6 @@
-## 0.0.2-dev.2
+## 0.0.2-dev.3
 
-* Development version.
+* Development version, Use with caution.
 
 ## 0.0.1
 
