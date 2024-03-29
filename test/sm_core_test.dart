@@ -1,5 +1,5 @@
-import 'package:flutter_sm_core/sm_core.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:sm_core/sm_core.dart';
 
 void main() {
   test('date format', () {

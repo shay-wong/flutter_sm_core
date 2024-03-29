@@ -1,8 +1,8 @@
 // TODO: 本地化还需要再优化
-import 'package:flutter_sm_get_plus/sm_get_plus.dart';
-import 'package:flutter_sm_logger/sm_logger.dart';
-import 'package:flutter_sm_models/generated/locales.g.dart';
-import 'package:flutter_sm_widget/generated/locales.g.dart';
+import 'package:sm_get_plus/sm_get_plus.dart';
+import 'package:sm_logger/sm_logger.dart';
+import 'package:sm_models/sm_models.dart';
+import 'package:sm_widget/sm_widget.dart';
 
 extension AppTranslationExt on Map<String, Map<String, String>> {
   Map<String, Map<String, String>>? mergeTranslations() {

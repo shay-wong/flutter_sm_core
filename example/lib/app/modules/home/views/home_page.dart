@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_sm_core/sm_core.dart';
 import 'package:get/get.dart';
+import 'package:sm_core/sm_core.dart';
 
 import '../controllers/home_controller.dart';
 
