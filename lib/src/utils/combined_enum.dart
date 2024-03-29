@@ -14,7 +14,8 @@ extension IterableEx<E extends Enum> on Iterable<E> {
 
 extension EnumEx<T extends Enum> on Enum {
   CombinedEnum operator |(T other) {
-    return CombinedEnum(mask: (1 << index) | (1 << other.index), values: {this, other});
+    return CombinedEnum(
+        mask: (1 << index) | (1 << other.index), values: {this, other});
   }
 }
 

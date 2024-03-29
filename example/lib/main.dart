@@ -13,7 +13,8 @@ void main() {
         title: "Application",
         initialRoute: AppPages.initial,
         getPages: AppPages.routes,
-        translationsKeys: example.AppTranslation.translations.mergeTranslations(), // 将本地化交给外部处, 将包中的本地化合并进来
+        translationsKeys: example.AppTranslation.translations
+            .mergeTranslations(), // 将本地化交给外部处, 将包中的本地化合并进来
         fallbackLocale: const Locale('en', 'US'),
         // locale: const Locale('zh', 'CN'),
         locale: const Locale('zh'),

@@ -9,7 +9,8 @@ part of 'data_format.dart';
 /// fields would be 'hh', ':', 'mm', ':', and 'ss'. Each type of field knows
 /// how to format that portion of a date.
 abstract class _DateFormatField {
-  _DateFormatField(this.pattern, this.parent) : _trimmedPattern = pattern.trim();
+  _DateFormatField(this.pattern, this.parent)
+      : _trimmedPattern = pattern.trim();
 
   /// The DateFormat that we are part of.
   DateFormat parent;
@@ -110,7 +111,8 @@ class _DateFormatLiteralField extends _DateFormatField {
   }
 
   @override
-  void parseLoose(StringStack input, DateBuilder dateFields) => parseLiteralLoose(input);
+  void parseLoose(StringStack input, DateBuilder dateFields) =>
+      parseLiteralLoose(input);
 }
 
 /*
@@ -210,11 +212,15 @@ class _DateFormatPatternField extends _DateFormatField {
 
   String formatDayOfWeek(DateTime date) {
     // Note that Dart's weekday returns 1 for Monday and 7 for Sunday.
-    return (width >= 4 ? symbols.WEEKDAYS : symbols.SHORTWEEKDAYS)[(date.weekday) % 7];
+    return (width >= 4
+        ? symbols.WEEKDAYS
+        : symbols.SHORTWEEKDAYS)[(date.weekday) % 7];
   }
 
-  String formatDayOfYear(DateTime date) =>
-      padTo(width, date_computation.dayOfYear(date.month, date.day, date_computation.isLeapYear(date)));
+  String formatDayOfYear(DateTime date) => padTo(
+      width,
+      date_computation.dayOfYear(
+          date.month, date.day, date_computation.isLeapYear(date)));
 
   String formatEra(DateTime date) {
     var era = date.year > 0 ? 1 : 0;
@@ -298,15 +304,23 @@ class _DateFormatPatternField extends _DateFormatField {
     var microseconds = duration.inMicroseconds;
     switch (pattern[0]) {
       case 'd':
-        return Duration(microseconds: microseconds.remainder(Duration.microsecondsPerDay));
+        return Duration(
+            microseconds: microseconds.remainder(Duration.microsecondsPerDay));
       case 'H':
-        return Duration(microseconds: microseconds.remainder(Duration.microsecondsPerHour));
+        return Duration(
+            microseconds: microseconds.remainder(Duration.microsecondsPerHour));
       case 'm':
-        return Duration(microseconds: microseconds.remainder(Duration.microsecondsPerMinute));
+        return Duration(
+            microseconds:
+                microseconds.remainder(Duration.microsecondsPerMinute));
       case 'S':
-        return Duration(microseconds: microseconds.remainder(Duration.microsecondsPerMillisecond));
+        return Duration(
+            microseconds:
+                microseconds.remainder(Duration.microsecondsPerMillisecond));
       case 's':
-        return Duration(microseconds: microseconds.remainder(Duration.microsecondsPerSecond));
+        return Duration(
+            microseconds:
+                microseconds.remainder(Duration.microsecondsPerSecond));
       default:
         return duration;
     }
@@ -434,7 +448,8 @@ class _DateFormatPatternField extends _DateFormatField {
 
   /// Return a string representation of the object padded to the left with
   /// zeros. Primarily useful for numbers.
-  String padTo(int width, Object toBePrinted) => parent._localizeDigits('$toBePrinted'.padLeft(width, '0'));
+  String padTo(int width, Object toBePrinted) =>
+      parent._localizeDigits('$toBePrinted'.padLeft(width, '0'));
 
   void parse1To12Hours(StringStack input, DateBuilder dateFields) {
     handleNumericField(input, dateFields.setHour);
@@ -661,13 +676,16 @@ class _DateFormatQuotedField extends _DateFormatField {
   }
 
   @override
-  void parseLoose(StringStack input, DateBuilder dateFields) => parseLiteralLoose(input);
+  void parseLoose(StringStack input, DateBuilder dateFields) =>
+      parseLiteralLoose(input);
 
   static String _patchQuotes(String pattern) {
     if (pattern == "''") {
       return "'";
     } else {
-      return pattern.substring(1, pattern.length - 1).replaceAll(_twoEscapedQuotes, "'");
+      return pattern
+          .substring(1, pattern.length - 1)
+          .replaceAll(_twoEscapedQuotes, "'");
     }
   }
 }
@@ -701,7 +719,8 @@ class _LoosePatternField extends _DateFormatPatternField {
   /// Assumes that input is lower case.
   @override
   int parseEnumeratedString(StringStack input, List<String> possibilities) {
-    var lowercasePossibilities = possibilities.map((x) => x.toLowerCase()).toList();
+    var lowercasePossibilities =
+        possibilities.map((x) => x.toLowerCase()).toList();
     try {
       return super.parseEnumeratedString(input, lowercasePossibilities);
     } on FormatException {
@@ -737,7 +756,10 @@ class _LoosePatternField extends _DateFormatPatternField {
       handleNumericField(input, (x) => x);
       return;
     }
-    var possibilities = [symbols.STANDALONEWEEKDAYS, symbols.STANDALONESHORTWEEKDAYS];
+    var possibilities = [
+      symbols.STANDALONEWEEKDAYS,
+      symbols.STANDALONESHORTWEEKDAYS
+    ];
     for (var dayNames in possibilities) {
       var day = parseEnumeratedString(input, dayNames);
       if (day != -1) {
@@ -754,7 +776,10 @@ class _LoosePatternField extends _DateFormatPatternField {
       handleNumericField(input, dateFields.setMonth);
       return;
     }
-    var possibilities = [symbols.STANDALONEMONTHS, symbols.STANDALONESHORTMONTHS];
+    var possibilities = [
+      symbols.STANDALONEMONTHS,
+      symbols.STANDALONESHORTMONTHS
+    ];
     for (var monthNames in possibilities) {
       var month = parseEnumeratedString(input, monthNames);
       if (month != -1) {
@@ -774,7 +799,8 @@ extension DateFormatExt on DateFormat {
     var newDigits = List<int>.filled(numberString.length, 0);
     var oldDigits = numberString.codeUnits;
     for (var i = 0; i < numberString.length; i++) {
-      newDigits[i] = oldDigits[i] + localeZeroCodeUnit - constants.asciiZeroCodeUnit;
+      newDigits[i] =
+          oldDigits[i] + localeZeroCodeUnit - constants.asciiZeroCodeUnit;
     }
     return String.fromCharCodes(newDigits);
   }

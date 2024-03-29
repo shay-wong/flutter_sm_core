@@ -6,7 +6,7 @@ class SecondBinding extends Bindings {
   @override
   void dependencies() {
     Get.lazyPut<SecondController>(
-        () => SecondController(),
+      () => SecondController(),
     );
   }
 }

@@ -59,10 +59,14 @@ extension MIntExt on int {
 
 extension MNumExt on num {
   BorderRadius get circular => BorderRadius.circular(toDouble());
-  BorderRadius get circularBottom => BorderRadius.vertical(bottom: Radius.circular(toDouble()));
-  BorderRadius get circularLeft => BorderRadius.horizontal(left: Radius.circular(toDouble()));
-  BorderRadius get circularRight => BorderRadius.horizontal(right: Radius.circular(toDouble()));
-  BorderRadius get circularTop => BorderRadius.vertical(top: Radius.circular(toDouble()));
+  BorderRadius get circularBottom =>
+      BorderRadius.vertical(bottom: Radius.circular(toDouble()));
+  BorderRadius get circularLeft =>
+      BorderRadius.horizontal(left: Radius.circular(toDouble()));
+  BorderRadius get circularRight =>
+      BorderRadius.horizontal(right: Radius.circular(toDouble()));
+  BorderRadius get circularTop =>
+      BorderRadius.vertical(top: Radius.circular(toDouble()));
   SizedBox get horizontalSpace => SizedBox(width: toDouble());
   SizedBox get hSpace => SizedBox(width: toDouble());
   SizedBox get verticalSpace => SizedBox(height: toDouble());
@@ -83,5 +87,6 @@ extension MNumExt on num {
     return money;
   }
 
-  double toPrecision(int fractionDigits) => toDouble().toPrecision(fractionDigits);
+  double toPrecision(int fractionDigits) =>
+      toDouble().toPrecision(fractionDigits);
 }

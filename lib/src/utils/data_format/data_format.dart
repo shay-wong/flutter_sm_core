@@ -51,11 +51,12 @@ class MDateFormat extends DateFormat {
     return super.addPattern(inputPattern, separator);
   }
 
-  static List<_DateFormatField Function(String, DateFormat)> get _fieldConstructors => [
-        (pattern, parent) => _DateFormatQuotedField(pattern, parent),
-        (pattern, parent) => _DateFormatPatternField(pattern, parent),
-        (pattern, parent) => _DateFormatLiteralField(pattern, parent)
-      ];
+  static List<_DateFormatField Function(String, DateFormat)>
+      get _fieldConstructors => [
+            (pattern, parent) => _DateFormatQuotedField(pattern, parent),
+            (pattern, parent) => _DateFormatPatternField(pattern, parent),
+            (pattern, parent) => _DateFormatLiteralField(pattern, parent)
+          ];
 
   /// Getter for [_formatFieldsPrivate] that lazily initializes it.
   List<_DateFormatField> get _formatFields {
@@ -100,7 +101,8 @@ class MDateFormat extends DateFormat {
     var matched = _match(pattern);
     if (matched == null) return [];
 
-    var parsed = _parsePatternHelper(pattern.substring(matched.fullPattern().length));
+    var parsed =
+        _parsePatternHelper(pattern.substring(matched.fullPattern().length));
     parsed.add(matched);
     return parsed;
   }

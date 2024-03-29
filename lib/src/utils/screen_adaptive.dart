@@ -20,7 +20,8 @@ double get aScaleHeight => screenUtil.limitScaleHeight;
 double get imageScaleWidth => 1 / screenUtil.limitScaleWidth;
 double get imageScaleHeight => 1 / screenUtil.limitScaleHeight;
 Size get screenSize => Size(screenWidth, screenHeight);
-double get safeHeight => screenUtil.statusBarHeight + screenUtil.bottomBarHeight;
+double get safeHeight =>
+    screenUtil.statusBarHeight + screenUtil.bottomBarHeight;
 double get safeTop => screenUtil.statusBarHeight;
 double get safeBottom => screenUtil.bottomBarHeight;
 double get pixelRatio => Get.pixelRatio;
@@ -38,8 +39,10 @@ extension ScreenUtilExt on ScreenUtil {
 extension NumExt on num {
   double maximum(num maximum) => min(toDouble(), maximum.toDouble());
   double minimum(num minimum) => max(toDouble(), minimum.toDouble());
-  double aws(num scale) => this * min(scale.toDouble(), screenUtil.limitScaleWidth);
-  double ahs(num scale) => this * min(scale.toDouble(), screenUtil.limitScaleHeight);
+  double aws(num scale) =>
+      this * min(scale.toDouble(), screenUtil.limitScaleWidth);
+  double ahs(num scale) =>
+      this * min(scale.toDouble(), screenUtil.limitScaleHeight);
   double get aw => this * screenUtil.limitScaleWidth;
   double get ah => this * screenUtil.limitScaleHeight;
   double get asp => min(sp, this * screenUtil.limitScaleText);
@@ -49,8 +52,10 @@ extension NumExt on num {
 extension DoubleExt on double {
   double maximum(num maximum) => min(toDouble(), maximum.toDouble());
   double minimum(num minimum) => max(toDouble(), minimum.toDouble());
-  double aws(num scale) => this * min(scale.toDouble(), screenUtil.limitScaleWidth);
-  double ahs(num scale) => this * min(scale.toDouble(), screenUtil.limitScaleHeight);
+  double aws(num scale) =>
+      this * min(scale.toDouble(), screenUtil.limitScaleWidth);
+  double ahs(num scale) =>
+      this * min(scale.toDouble(), screenUtil.limitScaleHeight);
   double get aw => this * screenUtil.limitScaleWidth;
   double get ah => this * screenUtil.limitScaleHeight;
   double get asp => min(sp, this * screenUtil.limitScaleText);

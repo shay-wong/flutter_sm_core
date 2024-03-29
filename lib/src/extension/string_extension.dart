@@ -20,7 +20,9 @@ extension StringEx on String {
     });
   }
 
-  Future<bool> launch({LaunchMode mode = LaunchMode.platformDefault, bool showErrorToas = true}) async {
+  Future<bool> launch(
+      {LaunchMode mode = LaunchMode.platformDefault,
+      bool showErrorToas = true}) async {
     try {
       if (await canLaunchUrlString(this)) {
         return launchUrlString(this, mode: mode);

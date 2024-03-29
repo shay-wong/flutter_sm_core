@@ -19,7 +19,8 @@ extension AppTranslationExt on Map<String, Map<String, String>> {
     return map;
   }
 
-  Map<String, Map<String, String>>? _mergeTranslations(Map<String, Map<String, String>> translations) {
+  Map<String, Map<String, String>>? _mergeTranslations(
+      Map<String, Map<String, String>> translations) {
     return translations.map(
       (key, value) {
         return MapEntry(key, {...value, ...?this[key]});

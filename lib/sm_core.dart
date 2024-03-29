@@ -21,4 +21,3 @@ export 'src/extension/uri_extension.dart';
 export 'src/utils/data_format/data_format.dart';
 export 'src/utils/screen_adaptive.dart';
 export 'src/utils/toast.dart';
-

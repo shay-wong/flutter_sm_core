@@ -1,4 +1,5 @@
 import '../utils/data_format/data_format.dart';
+
 extension DurationIntExt on int {
   Duration get seconds => Duration(seconds: this);
 
