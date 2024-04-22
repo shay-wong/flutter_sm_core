@@ -6,7 +6,7 @@ environment:
   sdk: ">=3.3.1 <4.0.0"
 
 dependencies:
-  cupertino_icons: ^1.0.6
+  cupertino_icons: ^1.0.8
   flutter:
     sdk: flutter
   flutter_localizations:
@@ -14,7 +14,7 @@ dependencies:
   sm_core:
     path: ../
   get: 4.6.6
-  intl: ^0.18.0
+  intl: ^0.18.1
 
 dev_dependencies:
   flutter_lints: ^3.0.2
@@ -32,4 +32,4 @@ flutter_intl:
   use_deferred_loading: true
 
 get_cli:
-  version: 5
+  version: 4

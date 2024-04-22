@@ -625,7 +625,9 @@ class _DateFormatPatternField extends _DateFormatField {
 
   void parseYear(StringStack input, DateBuilder builder) {
     handleNumericField(input, builder.setYear);
+    // TODO: intl 0.19.0
     // builder.hasAmbiguousCentury = width == 2;
+    // intl 0.18.1
     builder.setHasAmbiguousCentury(width == 2);
   }
 
