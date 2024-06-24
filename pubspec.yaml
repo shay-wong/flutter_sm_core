@@ -1,6 +1,6 @@
 name: sm_core
 description: "A simple core library for flutter, providing some common utilities and classes."
-version: 0.0.5
+version: 0.0.6
 homepage: "https://github.com/shay-wong/flutter_sm_core"
 repository: "https://github.com/shay-wong/flutter_sm_core"
 issue_tracker: "https://github.com/shay-wong/flutter_sm_core/issues"
@@ -16,7 +16,7 @@ dependencies:
   flutter_screenutil: ^5.9.3
   sm_logger: ^0.0.10
   sm_models: ^0.0.5
-  sm_network: ^0.1.0
+  sm_network: ^0.1.1
   sm_widget: ^0.0.8
   sm_get_plus: ^0.0.3
   get: ^4.6.6
